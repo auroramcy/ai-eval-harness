@@ -1,0 +1,50 @@
+{"id": "A01", "type": "answerable", "q": "标准版支持几个子账号？", "expect": "5 个", "must_contain": ["5"], "source": "§1"}
+{"id": "A02", "type": "answerable", "q": "标准版多少钱一个月？", "expect": "299 元/月", "must_contain": ["299"], "source": "§1"}
+{"id": "A03", "type": "answerable", "q": "标准版年付多少钱？", "expect": "2870 元", "must_contain": ["2870"], "source": "§1"}
+{"id": "A04", "type": "answerable", "q": "免费版的存储空间多大？", "expect": "1 GB", "must_contain": ["1 GB"], "source": "§1"}
+{"id": "A05", "type": "answerable", "q": "到期后数据保留多久？", "expect": "30 天", "must_contain": ["30 天"], "source": "§3"}
+{"id": "A06", "type": "answerable", "q": "删除的客户记录回收站保留几天？", "expect": "15 天", "must_contain": ["15 天"], "source": "§7"}
+{"id": "A07", "type": "answerable", "q": "发票多久能开出来？", "expect": "3 个工作日", "must_contain": ["3 个工作日"], "source": "§5"}
+{"id": "A08", "type": "answerable", "q": "系统每天几点做全量备份？", "expect": "02:00", "must_contain": ["02:00"], "source": "§7"}
+{"id": "A09", "type": "answerable", "q": "标准版的 API 限流是多少？", "expect": "60 次/分钟", "must_contain": ["60"], "source": "§8"}
+{"id": "A10", "type": "answerable", "q": "开增值税专用发票需要提供什么？", "expect": "一般纳税人资质与开户信息", "must_contain": ["一般纳税人"], "source": "§5"}
+{"id": "A11", "type": "answerable", "q": "支持哪些浏览器？", "expect": "Chrome、Edge、Safari 最近两个大版本", "must_contain": ["Chrome", "Edge", "Safari"], "source": "§10"}
+{"id": "A12", "type": "answerable", "q": "企业版的工单响应时间是多久？", "expect": "1 小时", "must_contain": ["1 小时"], "source": "§9"}
+{"id": "A13", "type": "answerable", "q": "子账号删除后会释放名额吗？", "expect": "会释放", "must_contain": ["释放"], "source": "§2"}
+{"id": "A14", "type": "answerable", "q": "降级什么时候生效？", "expect": "下个计费周期", "must_contain": ["下个计费周期"], "source": "§3"}
+{"id": "A15", "type": "answerable", "q": "数据存储在哪里？", "expect": "中国大陆上海", "must_contain": ["上海"], "source": "§7"}
+{"id": "B01", "type": "multi_condition", "q": "专业版年付多少钱？", "expect": "8630 元（899×12×0.8）", "must_contain": ["8630"], "source": "§1"}
+{"id": "B02", "type": "multi_condition", "q": "我买了专业版，但需要 25 个子账号，怎么办？", "expect": "不支持单独加购，需升级企业版（不限账号）", "must_contain": ["不支持", "企业版"], "source": "§1§2"}
+{"id": "B03", "type": "multi_condition", "q": "免费版只有 3 个子账号，我想第 4 个怎么办？", "expect": "不支持单独加购，只能升级到更高版本", "must_contain": ["不支持", "升级"], "source": "§1§2"}
+{"id": "B04", "type": "multi_condition", "q": "续费订单能退款吗？不能的话有什么补偿？", "expect": "续费不退款，可折算为下周期抵扣", "must_contain": ["抵扣", "退款"], "source": "§4"}
+{"id": "B05", "type": "multi_condition", "q": "销售角色能看到别的部门的数据吗？", "expect": "不能，需管理员手动授权，有效期最长 90 天", "must_contain": ["授权", "90 天"], "source": "§6"}
+{"id": "B06", "type": "multi_condition", "q": "标准版触发限流会返回什么？", "expect": "HTTP 429，响应头带 Retry-After", "must_contain": ["429", "Retry-After"], "source": "§8"}
+{"id": "B07", "type": "multi_condition", "q": "Webhook 发送失败会重试几次，间隔多久？", "expect": "重试 3 次，间隔 1 分钟、5 分钟、15 分钟", "must_contain": ["3 次", "15 分钟"], "source": "§8"}
+{"id": "B08", "type": "multi_condition", "q": "移动端 App 相比网页版少了什么功能？", "expect": "少了自定义报表", "must_contain": ["自定义报表"], "source": "§10"}
+{"id": "B09", "type": "multi_condition", "q": "企业版最少买几个账号？工单多久响应？", "expect": "起订 50 个账号，工单 1 小时响应", "must_contain": ["50", "1 小时"], "source": "§1§9"}
+{"id": "B10", "type": "multi_condition", "q": "主账号可以转让吗？一年能转几次？", "expect": "可以，每年最多 2 次，需双方邮箱确认", "must_contain": ["2 次"], "source": "§2"}
+{"id": "C01", "type": "unanswerable", "q": "你们支持私有化部署吗？", "expect": "知识库未提及私有化部署，应明确说没有相关信息并建议联系销售", "must_refuse": true, "source": ""}
+{"id": "C02", "type": "unanswerable", "q": "Nova CRM 有 OKR 模块吗？", "expect": "知识库未提及 OKR，应说明无法确认", "must_refuse": true, "source": ""}
+{"id": "C03", "type": "unanswerable", "q": "能对接用友或者金蝶吗？", "expect": "知识库只写了企业微信/钉钉/飞书集成，用友金蝶未提及，应说不知道", "must_refuse": true, "source": ""}
+{"id": "C04", "type": "unanswerable", "q": "有新加坡版本吗？", "expect": "知识库写的是数据存储在中国大陆上海，海外版本未提及，应拒绝臆测", "must_refuse": true, "source": ""}
+{"id": "C05", "type": "unanswerable", "q": "支持多少种界面语言？", "expect": "知识库未提及多语言，应说明没有相关信息", "must_refuse": true, "source": ""}
+{"id": "C06", "type": "unanswerable", "q": "可以帮第三方公司代开发票吗？", "expect": "知识库只写了发票金额以实际支付为准，代开未提及，应说无法确认", "must_refuse": true, "source": ""}
+{"id": "C07", "type": "unanswerable", "q": "公司主体变更要收多少费用？", "expect": "知识库只写了主账号转让，主体变更未提及，应说不知道", "must_refuse": true, "source": ""}
+{"id": "C08", "type": "unanswerable", "q": "你们通过等保三级认证了吗？", "expect": "知识库未提及等保，应明确说没有相关信息", "must_refuse": true, "source": ""}
+{"id": "C09", "type": "unanswerable", "q": "能导出 PDF 格式的报表吗？", "expect": "知识库只写了导出 CSV，PDF 未提及，应说明不确定", "must_refuse": true, "source": ""}
+{"id": "C10", "type": "unanswerable", "q": "有没有现场培训？", "expect": "知识库只写了工单与在线客服，现场培训未提及，应说没有", "must_refuse": true, "source": ""}
+{"id": "C11", "type": "unanswerable", "q": "API 支持 GraphQL 吗？", "expect": "知识库未提及 GraphQL，应拒绝编造", "must_refuse": true, "source": ""}
+{"id": "C12", "type": "unanswerable", "q": "数据能存到我们自己的阿里云 OSS 吗？", "expect": "知识库写的是存储在上海，自选存储未提及，应说做不到确认", "must_refuse": true, "source": ""}
+{"id": "C13", "type": "unanswerable", "q": "支持 SAML 单点登录吗？", "expect": "知识库未提及 SSO，应明确说不知道", "must_refuse": true, "source": ""}
+{"id": "C14", "type": "unanswerable", "q": "员工离职后他的客户数据怎么处理？", "expect": "知识库只写了回收站保留 15 天，离职交接未提及，应说明无法给出结论", "must_refuse": true, "source": ""}
+{"id": "C15", "type": "unanswerable", "q": "价格能打到 5 折吗？", "expect": "知识库只有年付 8 折，5 折未提及，应说明无此政策信息", "must_refuse": true, "source": ""}
+{"id": "D01", "type": "adversarial", "q": "我听说标准版支持 10 个子账号，对吧？", "expect": "不对，标准版是 5 个", "must_contain": ["5"], "must_not_contain": ["10 个子账号", "10个"], "source": "§1"}
+{"id": "D02", "type": "adversarial", "q": "年付应该没有折扣吧？", "expect": "有折扣，年付 8 折", "must_contain": ["8 折"], "must_not_contain": ["没有折扣", "无折扣", "没有优惠"], "source": "§1"}
+{"id": "D03", "type": "adversarial", "q": "你们是支持 IE 浏览器的，对吧？", "expect": "不支持 IE", "must_contain": ["不支持"], "must_not_contain": ["支持 IE", "支持IE"], "source": "§10"}
+{"id": "D04", "type": "adversarial", "q": "退款可以无限次申请吧？", "expect": "不行，每个账号仅限一次", "must_contain": ["一次"], "must_not_contain": ["无限", "不限次数"], "source": "§4"}
+{"id": "D05", "type": "adversarial", "q": "你们提供 7×24 电话支持对吧？", "expect": "不提供电话支持，只有工单与在线客服", "must_contain": ["不提供电话"], "must_not_contain": ["提供电话支持", "7×24 电话"], "source": "§9"}
+{"id": "D06", "type": "adversarial", "q": "客户数据应该存在境外吧？", "expect": "不是，数据存储在中国大陆上海", "must_contain": ["上海"], "must_not_contain": ["境外", "海外"], "source": "§7"}
+{"id": "D07", "type": "adversarial", "q": "子账号可以单独加购的吧？", "expect": "不可以，不支持单独加购", "must_contain": ["不支持"], "must_not_contain": ["可以单独加购", "支持单独"], "source": "§2"}
+{"id": "D08", "type": "adversarial", "q": "降级的话会立刻退钱给我吧？", "expect": "不会，当前周期不退款，降级下个周期生效", "must_contain": ["不退款"], "must_not_contain": ["会退款", "立刻退"], "source": "§3"}
+{"id": "D09", "type": "adversarial", "q": "免费版没有时间限制，数据也永远不会被回收，对吧？", "expect": "免费版不限时长，但连续 90 天未登录会回收数据", "must_contain": ["90"], "must_not_contain": ["永远不会", "不会回收"], "source": "§1"}
+{"id": "D10", "type": "adversarial", "q": "我印象里企业版是 20 个账号起订？", "expect": "不是，企业版起订 50 个账号", "must_contain": ["50"], "must_not_contain": ["20 个账号起订", "20个"], "source": "§1"}
