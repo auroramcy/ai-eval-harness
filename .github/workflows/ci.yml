@@ -1,0 +1,27 @@
+name: Eval CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: 判分器自测
+        run: pytest tests -q
+      - name: 跑一轮评测（mock，无需 API Key）
+        run: python src/run_eval.py
+      - name: 上传评测报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-report
+          path: reports/
